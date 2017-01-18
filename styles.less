@@ -1,0 +1,51 @@
+.sidebar {
+  background: #00695C;
+}
+
+@sidebar-user-height: 150px;
+.sidebar-user {
+  height: @sidebar-user-height;
+  font-size: 24px;
+  font-weight: bolder;
+  text-align: center;
+  line-height: @sidebar-user-height;
+  color: white;
+  background: #004D40;
+}
+
+
+#divisions-column {
+  width: 420px;
+  min-width: 420px;
+  padding: 5px;
+  //height: 200px;
+  //background: white;
+}
+
+
+
+#violations-column {
+  padding: 5px;
+}
+
+
+
+@block-title-height: 50px;
+.block {
+  background: white;
+
+  .block-title {
+    height: @block-title-height;
+    margin-right: -5px;
+    padding: 10px;
+    box-sizing: border-box;
+    line-height: @block-title-height - 20px;
+    font-weight: bold;
+    color: #006064;
+    //border-bottom: 1px solid #006064;
+  }
+
+  .block-content {
+    padding: 10px;
+  }
+}

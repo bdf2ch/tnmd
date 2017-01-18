@@ -1,0 +1,35 @@
+.sidebar {
+  background: #00695C;
+}
+.sidebar-user {
+  height: 150px;
+  font-size: 24px;
+  font-weight: bolder;
+  text-align: center;
+  line-height: 150px;
+  color: white;
+  background: #004D40;
+}
+#divisions-column {
+  width: 420px;
+  min-width: 420px;
+  padding: 5px;
+}
+#violations-column {
+  padding: 5px;
+}
+.block {
+  background: white;
+}
+.block .block-title {
+  height: 50px;
+  margin-right: -5px;
+  padding: 10px;
+  box-sizing: border-box;
+  line-height: 30px;
+  font-weight: bold;
+  color: #006064;
+}
+.block .block-content {
+  padding: 10px;
+}
