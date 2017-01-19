@@ -14,29 +14,28 @@
 
     <!-- Тулбар -->
     <md-toolbar layout="row" class="md-toolbar-tools">
-        <md-button class="menu md-icon-button" hide-gt-md="true" ng-click="open()">
+        <md-button class="menu md-icon-button" hide-gt-md ng-click="open()">
             <ng-md-icon icon="menu"></ng-md-icon>
         </md-button>
 
         <h1><b>Технологические нарушения</b></h1>
-    </md-toolbar>
 
-    <!-- Боковая панель -->
-    <!--<md-sidenav class="md-sidenav-left" md-is-open="true" md-disable-backdrop="false" md-component-id="left" md-whiteframe="4"></md-sidenav>-->
+    </md-toolbar>
 
     <!-- Контент -->
     <div layout="column" flex="flex" layout-gt-md="row">
 
-
-
-
-
         <md-content flex layout="row">
+
+
+
+            <!-- Боковая панель -->
             <md-sidenav md-component-id="left" class="md-sidenav-left sidebar" md-swipe-left="close()">
                 <div class="sidebar-user" flex="none">
                     Петров Иван
                 </div>
             </md-sidenav>
+
 
 
             <!-- Блок структурных подразделений -->
@@ -48,59 +47,79 @@
                </div>
             </div>
 
+
+
             <!-- Блок нарушений -->
             <div id="violations-column" flex layout="column">
 
-                <div class="block" md-whiteframe="1">
-                    <div class="block-title md-subhead">
-                        <div flex="85">Нарушения</div>
-                        <div flex="15" layout-align="center right">
-                            <md-button class="md-fab md-mini" aria-label="Поиск и фильтры" ng-click="showBottomSheet()">
-                                <ng-md-icon icon="filter_list"></ng-md-icon>
-                                <md-tooltip md-direction="top">
-                                    Поиск и фильтры
-                                </md-tooltip>
+                <div class="block" layout="column" md-whiteframe="1">
+                    <div class="block-title md-subhead" layout="row">
+                        <div flex="85" hide-xs hide-sm hide-md>Нарушения</div>
+                        <div flex-xs="80" flex-sm="80" flex-md="85" hide-gt-md>Структурное подразделение</div>
+                        <div layout="row" flex layout-align="end center">
+                            <md-button class="md-icon-button md-hue-2" hide-gt-md aria-label="Выбрать структурное подразделение">
+                                <md-icon md-svg-src="resources/icons/domain_cyan.svg"></md-icon>
                             </md-button>
                         </div>
                     </div>
-
                     <md-divider></md-divider>
                     <div>
-                        <md-list-item class="md-3-line">
-                            <div class="md-list-item-text" layout="row">
-                                <div flex="5">10</div>
-                                <div flex="5">+</div>
-                                <div flex="15">12.01.2017 в 10:36</div>
 
-                                <!-- Объект ЭСК -->
-                                <div flex="35">ВЛ 110 кВ Л-113 после АПВ</div>
-                                <div flex="50" hide="true" hide-gt-md="true">ВЛ 110 кВ Л-113 после АПВ tablet</div>
+                        <md-list class="violations-list">
+                            <md-list-item class="md-2-line violation-item">
+                                <div class="md-list-item-text" layout="row" layout-margin>
 
-                                <!-- Документы -->
-                                <div flex="20">15</div>
-                                <div flex="5">15</div>
 
-                                <div flex="20">Кукушечников Евстратий Павлович</div>
-                            </div>
-                            <md-divider></md-divider>
-                        </md-list-item>
-                        <md-list>
-                            <md-list-item class="md-2-line">
-                                <div class="md-list-item-text">
-                                    <h3>item.title</h3>
-                                    <p>item.description</p>
+                                    <!-- Номер нарушения -->
+                                    <div flex-xs="10" flex-sm="5" flex="5" layout="row" layout-align-md="center center" layout-align-sm="center center" layout-align-xs="center center" layout-align-gt-md="start center">
+                                        <div class="md-list-item-text">
+                                            <h3>10</h3>
+                                            <p hide-gt-sm>
+                                                <md-icon md-svg-src="resources/icons/done_small.svg" class="violation-confirmation small" aria-label="Нарушение подтверждено"></md-icon>
+                                            </p>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Нарушение подтверждено -->
+                                    <div flex-xs=10 flex-sm="5" layout="row" layout-align="center center" hide-xs hide-sm show-gt-md>
+                                        <div class="md-list-item-text">
+                                            <md-icon md-svg-src="resources/icons/done.svg" class="violation-confirmation" aria-label="Нарушение подтверждено"></md-icon>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Дата и время нарушения -->
+                                    <div flex="15" show-gt-md hide-md hide-sm hide-xs layout="column" layout-align="center start">12 января 2016 в 10:36</div>
+                                    <div flex-xs="20" flex-sm="15" flex-md="10" hide-gt-md layout="row" layout-align="start center" class="violation-date">
+                                        <div class="md-list-item-text">
+                                            <h3>12.01.17</h3>
+                                            <p>в 10:36</p>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Объект ЭСК -->
+                                    <div flex="35" show-gt-md hide-md hide-sm hide-xs>ВЛ 110 кВ Л-113 после АПВ lorem</div>
+                                    <div flex hide-gt-md class="violation-esk-object" layout="row" layout-align="start start">
+                                        <span>ВЛ 110 кВ Л-113 после АПВ</span>
+                                    </div>
+
+                                    <!-- Документы -->
+                                    <div flex="20" show-gt-md hide-md hide-sm hide-xs>15</div>
+                                    <div layout="row" flex-xs="10" flex-sm="10" flex-md="5" hide-gt-md layout-align-xs="end center">
+                                        <div class="md-list-item-text">
+                                            <h3>12</h3>
+                                            <p class="new-document-notification">+35</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Автор -->
+                                    <div flex="20" hide-md hide-sm hide-xs>Кукушечников Евстратий Павлович</div>
                                 </div>
+                                <md-divider></md-divider>
                             </md-list-item>
-                            <md-divider></md-divider>
-                        </md-list>
-                        <md-list>
-                            <md-list-item class="md-2-line">
-                                <div class="md-list-item-text">
-                                    <h3>item.title</h3>
-                                    <p>item.description</p>
-                                </div>
-                            </md-list-item>
-                            <md-divider></md-divider>
+
                         </md-list>
                     </div>
                 </div>

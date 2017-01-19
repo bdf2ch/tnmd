@@ -33,3 +33,37 @@
 .block .block-content {
   padding: 10px;
 }
+.violations-list {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.violations-list .md-2-line {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.violations-list .md-list-item-text {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.violation-item .violation-esk-object {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: none;
+  max-height: 70px;
+  vertical-align: top;
+}
+.violation-confirmation {
+  width: 24px;
+  height: 24px;
+  color: green;
+}
+.violation-confirmation.small {
+  width: 12px;
+  height: 12px;
+}
+.new-document-notification {
+  color: seagreen !important;
+}
+.violation {
+  min-height: 50px;
+}
