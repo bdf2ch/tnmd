@@ -16,41 +16,40 @@
   padding: 5px;
 }
 #violations-column {
-  padding: 5px;
+  margin: 5px;
+  box-sizing: border-box;
 }
 .block {
   background: white;
 }
 .block .block-title {
-  height: 50px;
-  margin-right: -5px;
-  padding: 10px;
-  box-sizing: border-box;
-  line-height: 30px;
-  font-weight: bold;
   color: #006064;
-}
-.block .block-content {
-  padding: 10px;
 }
 .violations-list {
   padding-top: 0px;
   padding-bottom: 0px;
 }
 .violations-list .md-2-line {
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
-.violations-list .md-list-item-text {
-  margin-top: 0px;
-  margin-bottom: 0px;
+.violations-list .md-list-item {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 .violation-item .violation-esk-object {
+  text-wrap: none;
+  max-height: 40px;
+  vertical-align: top;
+  display: block;
+  /* Fallback for non-webkit */
+  display: -webkit-box;
+  max-width: 400px;
+  margin: 0 auto;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  text-wrap: none;
-  max-height: 70px;
-  vertical-align: top;
 }
 .violation-confirmation {
   width: 24px;
@@ -60,6 +59,11 @@
 .violation-confirmation.small {
   width: 12px;
   height: 12px;
+}
+.attachment-icon {
+  width: 8px !important;
+  margin-right: 0px;
+  margin-left: 0px;
 }
 .new-document-notification {
   color: seagreen !important;

@@ -25,28 +25,36 @@
 
 
 #violations-column {
-  padding: 5px;
+  //padding: 5px;
+  margin: 5px;
+  box-sizing: border-box;
+  //overflow: hidden;
 }
 
 
 
-@block-title-height: 50px;
+@block-title-height: 100px;
 .block {
+  //overflow: visible;
   background: white;
+  //border: 1px solid lightgrey;
 
   .block-title {
-    height: @block-title-height;
-    margin-right: -5px;
-    padding: 10px;
-    box-sizing: border-box;
-    line-height: @block-title-height - 20px;
-    font-weight: bold;
+    //height: @block-title-height;
+   // margin-right: -5px;
+    //padding: 10px;
+    //padding-top: 20px;
+    //padding-bottom: 20px;
+    //box-sizing: border-box;
+    //line-height: @block-title-height - 20px;
+    //font-weight: bold;
     color: #006064;
     //border-bottom: 1px solid #006064;
   }
 
   .block-content {
-    padding: 10px;
+    //padding: 10px;
+    //overflow: visible;
   }
 }
 
@@ -58,15 +66,20 @@
   padding-bottom: 0px;
 
   .md-2-line {
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .md-list-item-text {
     //padding-top: 5px;
     //padding-bottom: 5px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    //margin-top: 0px;
+    //margin-bottom: 0px;
+  }
+
+  .md-list-item {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
 }
@@ -88,8 +101,21 @@
     overflow: hidden;
     text-overflow: ellipsis;
     text-wrap: none;
-    max-height: 70px;
+    max-height: 40px;
     vertical-align: top;
+    //font-size: 14px;
+
+    display: block; /* Fallback for non-webkit */
+    display: -webkit-box;
+    max-width: 400px;
+    //height: auto; /* Fallback for non-webkit */
+    margin: 0 auto;
+    //font-size: $font-size;
+    //line-height: $line-height;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
@@ -102,6 +128,13 @@
     width: 12px;
     height: 12px;
   }
+}
+
+.attachment-icon {
+  width: 8px !important;
+  //min-width: 12px;
+  margin-right: 0px;
+  margin-left: 0px;
 }
 
 .new-document-notification {

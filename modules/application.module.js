@@ -8,7 +8,7 @@ angular
     .controller("BottomSheetController", ["$scope", function ($scope) {
 
     }])
-    .controller("TestController", ["$log", "$scope", "$mdSidenav", "$mdBottomSheet", function ($log, $scope, $mdSidenav, $mdBottomSheet) {
+    .controller("TestController", ["$log", "$scope", "$mdSidenav", "$mdBottomSheet", "$mdDialog", function ($log, $scope, $mdSidenav, $mdBottomSheet, $mdDialog) {
         $scope.open = function () {
             $mdSidenav('left').open()
                 .then(function () {
@@ -28,5 +28,37 @@ angular
                 templateUrl: 'templates/bottom-sheet.html',
                 controller: 'BottomSheetController'
             });
+        };
+
+
+        $scope.showDialog = function(ev) {
+            $mdDialog.show({
+                controller: PopupController,
+                templateUrl: "templates/popup.html",
+                parent: angular.element(document.body),
+                targetEvent: ev,
+                clickOutsideToClose:true,
+                fullscreen: true // Only for -xs, -sm breakpoints.
+            })
+                .then(function(answer) {
+                    //$scope.status = 'You said the information was "' + answer + '".';
+                }, function() {
+                    //$scope.status = 'You cancelled the dialog.';
+                });
+        };
+
+
+        function PopupController ($scope, $mdDialog) {
+            $scope.hide = function() {
+                $mdDialog.hide();
+            };
+
+            $scope.cancel = function() {
+                $mdDialog.cancel();
+            };
+
+            $scope.answer = function(answer) {
+                $mdDialog.hide(answer);
+            };
         };
     }]);
