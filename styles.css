@@ -23,6 +23,7 @@
   background: white;
 }
 .block .block-title {
+  padding: 20px;
   color: #006064;
 }
 .violations-list {
@@ -36,20 +37,6 @@
 .violations-list .md-list-item {
   padding-left: 0px;
   padding-right: 0px;
-}
-.violation-item .violation-esk-object {
-  text-wrap: none;
-  max-height: 40px;
-  vertical-align: top;
-  display: block;
-  /* Fallback for non-webkit */
-  display: -webkit-box;
-  max-width: 400px;
-  margin: 0 auto;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .violation-confirmation {
   width: 24px;
@@ -70,4 +57,38 @@
 }
 .violation {
   min-height: 50px;
+  padding: 5px;
+}
+.violation-number {
+  padding-right: 10px;
+}
+.violation-number .md-icon {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.violation-is-confirmed {
+  padding-right: 10px;
+}
+.violation-date {
+  padding-right: 10px;
+}
+.violation-date .time {
+  vertical-align: bottom;
+  font-size: 15px;
+  color: gray;
+}
+.violation-esk-object {
+  padding-right: 10px;
+  text-wrap: none;
+  max-height: 40px;
+  vertical-align: top;
+  display: block;
+  /* Fallback for non-webkit */
+  display: -webkit-box;
+  max-width: 400px;
+  margin: 0 auto;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
