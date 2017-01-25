@@ -18,6 +18,7 @@
   width: 420px;
   min-width: 420px;
   padding: 5px;
+  padding-top: 10px;
   //height: 200px;
   //background: white;
 }
@@ -25,10 +26,16 @@
 
 
 #violations-column {
-  //padding: 5px;
-  margin: 5px;
-  box-sizing: border-box;
+  padding: 5px;
+  padding-top: 10px;
+  //margin: 5px;
+  //padding-bottom: 10px;
+  //box-sizing: border-box;
   //overflow: hidden;
+
+  &.cellphone {
+    padding: 0px;
+  }
 }
 
 
@@ -108,12 +115,6 @@
   }
 }
 
-.attachment-icon {
-  width: 8px !important;
-  //min-width: 12px;
-  margin-right: 0px;
-  margin-left: 0px;
-}
 
 .new-document-notification {
   //padding: 2px;
@@ -124,27 +125,56 @@
 
 
 
+
+.violations-container {
+  //padding: 5px;
+
+  &.cellphone {
+    padding: 0px;
+
+    .violation {
+      min-height: 60px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+
+  }
+
+  &.tablet {
+    .violation-attachments {
+      padding-right: 10px;
+    }
+  }
+}
+
 .violation {
-  min-height: 50px;
+  max-height: 50px;
   padding: 5px;
+  background: white;
+  //border-top: 1px solid lightgrey;
+  //border-left: 1px solid lightgrey;
+  //border-right: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
 }
 
 
 
 
 .violation-number {
-  //padding-top: 5px;
   padding-right: 10px;
 
-  .md-icon {
-    margin-top: 0px;
-    margin-bottom: 0px;
+  .confirmed-icon {
+    color: #2E7D32 !important;
   }
 }
 
 .violation-is-confirmed {
-  //padding-top: 5px;
   padding-right: 10px;
+
+  .confirmed-icon {
+    color: #2E7D32 !important;
+  }
 }
 
 .violation-date {
@@ -152,7 +182,7 @@
   padding-right: 10px;
 
   .time {
-    //margin-top: 5px;
+    //margin-top: 3px;
     vertical-align: bottom;
     font-size: 15px;
     color: gray;
@@ -178,7 +208,7 @@
 
   display: block; /* Fallback for non-webkit */
   display: -webkit-box;
-  max-width: 400px;
+  //max-width: 400px;
   //height: auto; /* Fallback for non-webkit */
   margin: 0 auto;
   //font-size: $font-size;
@@ -190,9 +220,13 @@
 }
 
 .violation-attachments {
-  //padding-right: 5px;
 
-  .md-icon {
-
+  .attachments-icon {
+    md-icon {
+      color: #00695C !important;
+    }
+  }
+  .new-attachments {
+    color: #2E7D32 !important;
   }
 }

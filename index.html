@@ -38,116 +38,584 @@
 
             <!-- Блок структурных подразделений -->
             <div id="divisions-column" flex="initial" hide hide-gt-md show-gt-md layout="column" flex>
-               <div class="block" layout="column" md-whiteframe="1">
-                    <div class="block-title md-subhead" layout-align="start center">Структурные подразделения</div>
+               <div class="block" layout="column">
+                   <div class="block-title md-subhead" layout-align="start center">Структурные подразделения</div>
                    <md-divider></md-divider>
                    <div class="block-content" layout="column" layout-padding>
-                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dolores eveniet facere in inventore rerum suscipit voluptates. Architecto excepturi expedita facere, harum inventore iure maxime modi nulla numquam repellendus, veniam.</div>
+                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dolores eveniet facere in inventore rerum suscipit voluptates. Architecto excepturi expedita facere, harum inventore iure maxime modi nulla numquam repellendus, veniam.
+                   </div>
                </div>
             </div>
 
 
 
             <!-- Блок нарушений -->
-            <div id="violations-column" layout="column" flex>
+            <div id="violations-column" layout="column" flex ng-class="{ ' cellphone': mdMedia('xs') === true || mdMedia('sm') === true || mdMedia('md') === true}">
+                <div class="block" layout="column">
+                    <div class="block-title md-subhead" layout-align="start center">Структурные подразделения</div>
+                    <md-divider></md-divider>
+                    <div class="block-content">
 
-                <div class="violation" layout="row">
+                        <div class="violations-container" layout="column" ng-class="{ ' cellphone': mdMedia('xs') === true || mdMedia('sm') == true || mdMedia('md') === true, ' tablet': mdMedia('md') === true }">
 
-                    <div class="violation-number" layout="column" flex-xs="10" flex-sm="10" flex="5" layout-align="start center" layout-align-xs="start start" layout-align-sm="start start">
-                        <div>10</div>
-                        <div>
-                            <md-icon md-font-icon="material icons" show-xs show-sm hide-md hide-gt-md>done</md-icon>
+                            <div class="violation" layout="row">
+
+                                <div class="violation-number" layout="column" flex-xs="10" flex-sm="10" flex="5" layout-align="start center" layout-align-xs="start start" layout-align-sm="start start">
+                                    <div>10</div>
+                                    <div>
+                                        <md-icon md-font-icon="material icons" class="confirmed-icon" show-xs show-sm hide-md hide-gt-md>done</md-icon>
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-is-confirmed" layout="column" hide-xs hide-sm show-gt show-gt-md flex-xs="10" flex-sm="10" flex-md="5" flex-gt-md="5" layout-align="start center">
+                                    <div>
+                                        <md-icon md-font-icon="material icons" class="confirmed-icon">done</md-icon>
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-date" layout="column" layout-align="start start" flex-md="20">
+                                    <span hide-xs hide-sm show-md show-gt-md>12 янв 2017 в 10:16</span>
+                                    <span show-xs show-sm hide-md hide-gt-md>12.01.17</span>
+                                    <span class="time" show-xs show-sm hide-md hide-gt-md>в 10:16</span>
+                                </div>
+
+
+                                <div layout="row" flex flex flex-xs="80" flex-sm="80" layout-align="start start">
+                                    <div class="violation-esk-object">
+                                        ВЛ-110 кВ л.Южная-2 (ПС Южная - ПС Шимск с отпайками на ПС Керамзит, ПС Ракомо, ПС Борки, ПС Лесная)
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-attachments" layout="column" flex-xs="25" flex-sm="15" flex-md="10" flex-gt-md="10" layout-align="center start" layout-align-xs="start end" layout-align-sm="start end" layout-align-md="start end">
+                                    <div class="attachments-icon">
+                                        <md-icon md-font-icon="material icons" hide-gt-md>attach_file</md-icon> 12
+                                    </div>
+                                    <div>
+                                        <div hide-xs hide-sm hide-md show-gt-md>новых: 6</div>
+                                        <div class="new-attachments" flex hide-gt-md layout-align="end center">+6</div>
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-esk-object" layout="row" hide-xs hide-sm hide-md flex-gt-md="20" layout-align="start start">
+                                    <div>Василеостровский Бенедикт Семенович</div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="violation" layout="row">
+
+                                <div class="violation-number" layout="column" flex-xs="10" flex-sm="10" flex="5" layout-align="start center" layout-align-xs="start start" layout-align-sm="start start">
+                                    <div>10</div>
+                                    <div>
+                                        <md-icon md-font-icon="material icons" class="confirmed-icon" show-xs show-sm hide-md hide-gt-md>done</md-icon>
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-is-confirmed" layout="column" hide-xs hide-sm show-gt show-gt-md flex-xs="10" flex-sm="10" flex-md="5" flex-gt-md="5" layout-align="start center">
+                                    <div>
+                                        <md-icon md-font-icon="material icons" class="confirmed-icon">done</md-icon>
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-date" layout="column" layout-align="start start" flex-md="20">
+                                    <span hide-xs hide-sm show-md show-gt-md>12 янв 2017 в 10:16</span>
+                                    <span show-xs show-sm hide-md hide-gt-md>12.01.17</span>
+                                    <span class="time" show-xs show-sm hide-md hide-gt-md>в 10:16</span>
+                                </div>
+
+
+                                <div layout="row" flex flex flex-xs="80" flex-sm="80" layout-align="start start">
+                                    <div class="violation-esk-object">
+                                        ВЛ-110 кВ л.Южная-2 (ПС Южная - ПС Шимск с отпайками на ПС Керамзит, ПС Ракомо, ПС Борки, ПС Лесная)
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-attachments" layout="column" flex-xs="25" flex-sm="15" flex-md="10" flex-gt-md="10" layout-align="center start" layout-align-xs="start end" layout-align-sm="start end" layout-align-md="start end">
+                                    <div class="attachments-icon">
+                                        <md-icon md-font-icon="material icons" hide-gt-md>attach_file</md-icon> 12
+                                    </div>
+                                    <div>
+                                        <div hide-xs hide-sm hide-md show-gt-md>новых: 6</div>
+                                        <div class="new-attachments" flex hide-gt-md layout-align="end center">+6</div>
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-esk-object" layout="row" hide-xs hide-sm hide-md flex-gt-md="20" layout-align="start start">
+                                    <div>Василеостровский Бенедикт Семенович</div>
+                                </div>
+                            </div>
+                            <div class="violation" layout="row">
+
+                                <div class="violation-number" layout="column" flex-xs="10" flex-sm="10" flex="5" layout-align="start center" layout-align-xs="start start" layout-align-sm="start start">
+                                    <div>10</div>
+                                    <div>
+                                        <md-icon md-font-icon="material icons" class="confirmed-icon" show-xs show-sm hide-md hide-gt-md>done</md-icon>
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-is-confirmed" layout="column" hide-xs hide-sm show-gt show-gt-md flex-xs="10" flex-sm="10" flex-md="5" flex-gt-md="5" layout-align="start center">
+                                    <div>
+                                        <md-icon md-font-icon="material icons" class="confirmed-icon">done</md-icon>
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-date" layout="column" layout-align="start start" flex-md="20">
+                                    <span hide-xs hide-sm show-md show-gt-md>12 янв 2017 в 10:16</span>
+                                    <span show-xs show-sm hide-md hide-gt-md>12.01.17</span>
+                                    <span class="time" show-xs show-sm hide-md hide-gt-md>в 10:16</span>
+                                </div>
+
+
+                                <div layout="row" flex flex flex-xs="80" flex-sm="80" layout-align="start start">
+                                    <div class="violation-esk-object">
+                                        ВЛ-110 кВ л.Южная-2 (ПС Южная - ПС Шимск с отпайками на ПС Керамзит, ПС Ракомо, ПС Борки, ПС Лесная)
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-attachments" layout="column" flex-xs="25" flex-sm="15" flex-md="10" flex-gt-md="10" layout-align="center start" layout-align-xs="start end" layout-align-sm="start end" layout-align-md="start end">
+                                    <div class="attachments-icon">
+                                        <md-icon md-font-icon="material icons" hide-gt-md>attach_file</md-icon> 12
+                                    </div>
+                                    <div>
+                                        <div hide-xs hide-sm hide-md show-gt-md>новых: 6</div>
+                                        <div class="new-attachments" flex hide-gt-md layout-align="end center">+6</div>
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-esk-object" layout="row" hide-xs hide-sm hide-md flex-gt-md="20" layout-align="start start">
+                                    <div>Василеостровский Бенедикт Семенович</div>
+                                </div>
+                            </div>
+                            <div class="violation" layout="row">
+
+                                <div class="violation-number" layout="column" flex-xs="10" flex-sm="10" flex="5" layout-align="start center" layout-align-xs="start start" layout-align-sm="start start">
+                                    <div>10</div>
+                                    <div>
+                                        <md-icon md-font-icon="material icons" class="confirmed-icon" show-xs show-sm hide-md hide-gt-md>done</md-icon>
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-is-confirmed" layout="column" hide-xs hide-sm show-gt show-gt-md flex-xs="10" flex-sm="10" flex-md="5" flex-gt-md="5" layout-align="start center">
+                                    <div>
+                                        <md-icon md-font-icon="material icons" class="confirmed-icon">done</md-icon>
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-date" layout="column" layout-align="start start" flex-md="20">
+                                    <span hide-xs hide-sm show-md show-gt-md>12 янв 2017 в 10:16</span>
+                                    <span show-xs show-sm hide-md hide-gt-md>12.01.17</span>
+                                    <span class="time" show-xs show-sm hide-md hide-gt-md>в 10:16</span>
+                                </div>
+
+
+                                <div layout="row" flex flex flex-xs="80" flex-sm="80" layout-align="start start">
+                                    <div class="violation-esk-object">
+                                        ВЛ-110 кВ л.Южная-2 (ПС Южная - ПС Шимск с отпайками на ПС Керамзит, ПС Ракомо, ПС Борки, ПС Лесная)
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-attachments" layout="column" flex-xs="25" flex-sm="15" flex-md="10" flex-gt-md="10" layout-align="center start" layout-align-xs="start end" layout-align-sm="start end" layout-align-md="start end">
+                                    <div class="attachments-icon">
+                                        <md-icon md-font-icon="material icons" hide-gt-md>attach_file</md-icon> 12
+                                    </div>
+                                    <div>
+                                        <div hide-xs hide-sm hide-md show-gt-md>новых: 6</div>
+                                        <div class="new-attachments" flex hide-gt-md layout-align="end center">+6</div>
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-esk-object" layout="row" hide-xs hide-sm hide-md flex-gt-md="20" layout-align="start start">
+                                    <div>Василеостровский Бенедикт Семенович</div>
+                                </div>
+                            </div>
+                            <div class="violation" layout="row">
+
+                                <div class="violation-number" layout="column" flex-xs="10" flex-sm="10" flex="5" layout-align="start center" layout-align-xs="start start" layout-align-sm="start start">
+                                    <div>10</div>
+
+                                </div>
+
+
+                                <div class="violation-is-confirmed" layout="column" hide-xs hide-sm show-gt show-gt-md flex-xs="10" flex-sm="10" flex-md="5" flex-gt-md="5" layout-align="start center">
+                                    <div>
+                                        <md-icon md-font-icon="material icons" class="confirmed-icon">done</md-icon>
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-date" layout="column" layout-align="start start" flex-md="20">
+                                    <span hide-xs hide-sm show-md show-gt-md>12 янв 2017 в 10:16</span>
+                                    <span show-xs show-sm hide-md hide-gt-md>12.01.17</span>
+                                    <span class="time" show-xs show-sm hide-md hide-gt-md>в 10:16</span>
+                                </div>
+
+
+                                <div layout="row" flex flex flex-xs="80" flex-sm="80" layout-align="start start">
+                                    <div class="violation-esk-object" flex>
+                                        ВЛ-110 кВ л.Южная-2 (ПС Южная - ПС Шимск с отпайками на ПС Керамзит, ПС Ракомо, ПС Борки, ПС Лесная)
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-attachments" layout="column" flex-xs="25" flex-sm="15" flex-md="10" flex-gt-md="10" layout-align="center start" layout-align-xs="start end" layout-align-sm="start end" layout-align-md="start end">
+                                    <div class="attachments-icon">
+                                        <md-icon md-font-icon="material icons" hide-gt-md>attach_file</md-icon> 12
+                                    </div>
+                                    <div>
+                                        <div hide-xs hide-sm hide-md show-gt-md>новых: 6</div>
+                                        <div class="new-attachments" flex hide-gt-md layout-align="end center">+2</div>
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-esk-object" layout="row" hide-xs hide-sm hide-md flex-gt-md="20" layout-align="start start">
+                                    <div>Василеостровский Бенедикт Семенович</div>
+                                </div>
+                            </div>
+                            <div class="violation" layout="row">
+
+                                <div class="violation-number" layout="column" flex-xs="10" flex-sm="10" flex="5" layout-align="start center" layout-align-xs="start start" layout-align-sm="start start">
+                                    <div>10</div>
+                                    <div>
+                                        <md-icon md-font-icon="material icons" class="confirmed-icon" show-xs show-sm hide-md hide-gt-md>done</md-icon>
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-is-confirmed" layout="column" hide-xs hide-sm show-gt show-gt-md flex-xs="10" flex-sm="10" flex-md="5" flex-gt-md="5" layout-align="start center">
+                                    <div>
+                                        <md-icon md-font-icon="material icons" class="confirmed-icon">done</md-icon>
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-date" layout="column" layout-align="start start" flex-md="20">
+                                    <span hide-xs hide-sm show-md show-gt-md>12 янв 2017 в 10:16</span>
+                                    <span show-xs show-sm hide-md hide-gt-md>12.01.17</span>
+                                    <span class="time" show-xs show-sm hide-md hide-gt-md>в 10:16</span>
+                                </div>
+
+
+                                <div layout="row" flex flex flex-xs="80" flex-sm="80" layout-align="start start">
+                                    <div flex class="violation-esk-object">
+                                        ВЛ-110 кВ л.Южная-2
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-attachments" layout="column" flex-xs="25" flex-sm="15" flex-md="10" flex-gt-md="10" layout-align="center start" layout-align-xs="start end" layout-align-sm="start end" layout-align-md="start end">
+                                    <div class="attachments-icon">
+                                        <md-icon md-font-icon="material icons" hide-gt-md>attach_file</md-icon> 12
+                                    </div>
+                                    <div>
+                                        <div hide-xs hide-sm hide-md show-gt-md>новых: 6</div>
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-esk-object" layout="row" hide-xs hide-sm hide-md flex-gt-md="20" layout-align="start start">
+                                    <div>Василеостровский Бенедикт Семенович</div>
+                                </div>
+                            </div>
+                            <div class="violation" layout="row">
+
+                                <div class="violation-number" layout="column" flex-xs="10" flex-sm="10" flex="5" layout-align="start center" layout-align-xs="start start" layout-align-sm="start start">
+                                    <div>10</div>
+                                    <div>
+                                        <md-icon md-font-icon="material icons" class="confirmed-icon" show-xs show-sm hide-md hide-gt-md>done</md-icon>
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-is-confirmed" layout="column" hide-xs hide-sm show-gt show-gt-md flex-xs="10" flex-sm="10" flex-md="5" flex-gt-md="5" layout-align="start center">
+                                    <div>
+                                        <md-icon md-font-icon="material icons" class="confirmed-icon">done</md-icon>
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-date" layout="column" layout-align="start start" flex-md="20">
+                                    <span hide-xs hide-sm show-md show-gt-md>12 янв 2017 в 10:16</span>
+                                    <span show-xs show-sm hide-md hide-gt-md>12.01.17</span>
+                                    <span class="time" show-xs show-sm hide-md hide-gt-md>в 10:16</span>
+                                </div>
+
+
+                                <div layout="row" flex flex flex-xs="80" flex-sm="80" layout-align="start start">
+                                    <div class="violation-esk-object">
+                                        ВЛ-110 кВ л.Южная-2 (ПС Южная - ПС Шимск с отпайками на ПС Керамзит, ПС Ракомо, ПС Борки, ПС Лесная)
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-attachments" layout="column" flex-xs="25" flex-sm="15" flex-md="10" flex-gt-md="10" layout-align="center start" layout-align-xs="start end" layout-align-sm="start end" layout-align-md="start end">
+                                    <div class="attachments-icon">
+                                        <md-icon md-font-icon="material icons" hide-gt-md>attach_file</md-icon> 12
+                                    </div>
+                                    <div>
+                                        <div hide-xs hide-sm hide-md show-gt-md>новых: 6</div>
+                                        <div class="new-attachments" flex hide-gt-md layout-align="end center">+6</div>
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-esk-object" layout="row" hide-xs hide-sm hide-md flex-gt-md="20" layout-align="start start">
+                                    <div>Василеостровский Бенедикт Семенович</div>
+                                </div>
+                            </div>
+                            <div class="violation" layout="row">
+
+                                <div class="violation-number" layout="column" flex-xs="10" flex-sm="10" flex="5" layout-align="start center" layout-align-xs="start start" layout-align-sm="start start">
+                                    <div>10</div>
+                                    <div>
+                                        <md-icon md-font-icon="material icons" class="confirmed-icon" show-xs show-sm hide-md hide-gt-md>done</md-icon>
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-is-confirmed" layout="column" hide-xs hide-sm show-gt show-gt-md flex-xs="10" flex-sm="10" flex-md="5" flex-gt-md="5" layout-align="start center">
+                                    <div>
+                                        <md-icon md-font-icon="material icons" class="confirmed-icon">done</md-icon>
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-date" layout="column" layout-align="start start" flex-md="20">
+                                    <span hide-xs hide-sm show-md show-gt-md>12 янв 2017 в 10:16</span>
+                                    <span show-xs show-sm hide-md hide-gt-md>12.01.17</span>
+                                    <span class="time" show-xs show-sm hide-md hide-gt-md>в 10:16</span>
+                                </div>
+
+
+                                <div layout="row" flex flex flex-xs="80" flex-sm="80" layout-align="start start">
+                                    <div class="violation-esk-object">
+                                        ВЛ-110 кВ л.Южная-2 (ПС Южная - ПС Шимск с отпайками на ПС Керамзит, ПС Ракомо, ПС Борки, ПС Лесная)
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-attachments" layout="column" flex-xs="25" flex-sm="15" flex-md="10" flex-gt-md="10" layout-align="center start" layout-align-xs="start end" layout-align-sm="start end" layout-align-md="start end">
+                                    <div class="attachments-icon">
+                                        <md-icon md-font-icon="material icons" hide-gt-md>attach_file</md-icon> 12
+                                    </div>
+                                    <div>
+                                        <div hide-xs hide-sm hide-md show-gt-md>новых: 6</div>
+                                        <div class="new-attachments" flex hide-gt-md layout-align="end center">+6</div>
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-esk-object" layout="row" hide-xs hide-sm hide-md flex-gt-md="20" layout-align="start start">
+                                    <div>Василеостровский Бенедикт Семенович</div>
+                                </div>
+                            </div>
+                            <div class="violation" layout="row">
+
+                                <div class="violation-number" layout="column" flex-xs="10" flex-sm="10" flex="5" layout-align="start center" layout-align-xs="start start" layout-align-sm="start start">
+                                    <div>10</div>
+                                    <div>
+                                        <md-icon md-font-icon="material icons" class="confirmed-icon" show-xs show-sm hide-md hide-gt-md>done</md-icon>
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-is-confirmed" layout="column" hide-xs hide-sm show-gt show-gt-md flex-xs="10" flex-sm="10" flex-md="5" flex-gt-md="5" layout-align="start center">
+                                    <div>
+                                        <md-icon md-font-icon="material icons" class="confirmed-icon">done</md-icon>
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-date" layout="column" layout-align="start start" flex-md="20">
+                                    <span hide-xs hide-sm show-md show-gt-md>12 янв 2017 в 10:16</span>
+                                    <span show-xs show-sm hide-md hide-gt-md>12.01.17</span>
+                                    <span class="time" show-xs show-sm hide-md hide-gt-md>в 10:16</span>
+                                </div>
+
+
+                                <div layout="row" flex flex flex-xs="80" flex-sm="80" layout-align="start start">
+                                    <div class="violation-esk-object">
+                                        ВЛ-110 кВ л.Южная-2 (ПС Южная - ПС Шимск с отпайками на ПС Керамзит, ПС Ракомо, ПС Борки, ПС Лесная)
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-attachments" layout="column" flex-xs="25" flex-sm="15" flex-md="10" flex-gt-md="10" layout-align="center start" layout-align-xs="start end" layout-align-sm="start end" layout-align-md="start end">
+                                    <div class="attachments-icon">
+                                        <md-icon md-font-icon="material icons" hide-gt-md>attach_file</md-icon> 12
+                                    </div>
+                                    <div>
+                                        <div hide-xs hide-sm hide-md show-gt-md>новых: 6</div>
+                                        <div class="new-attachments" flex hide-gt-md layout-align="end center">+6</div>
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-esk-object" layout="row" hide-xs hide-sm hide-md flex-gt-md="20" layout-align="start start">
+                                    <div>Василеостровский Бенедикт Семенович</div>
+                                </div>
+                            </div>
+                            <div class="violation" layout="row">
+
+                                <div class="violation-number" layout="column" flex-xs="10" flex-sm="10" flex="5" layout-align="start center" layout-align-xs="start start" layout-align-sm="start start">
+                                    <div>10</div>
+                                    <div>
+                                        <md-icon md-font-icon="material icons" class="confirmed-icon" show-xs show-sm hide-md hide-gt-md>done</md-icon>
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-is-confirmed" layout="column" hide-xs hide-sm show-gt show-gt-md flex-xs="10" flex-sm="10" flex-md="5" flex-gt-md="5" layout-align="start center">
+                                    <div>
+                                        <md-icon md-font-icon="material icons" class="confirmed-icon">done</md-icon>
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-date" layout="column" layout-align="start start" flex-md="20">
+                                    <span hide-xs hide-sm show-md show-gt-md>12 янв 2017 в 10:16</span>
+                                    <span show-xs show-sm hide-md hide-gt-md>12.01.17</span>
+                                    <span class="time" show-xs show-sm hide-md hide-gt-md>в 10:16</span>
+                                </div>
+
+
+                                <div layout="row" flex flex flex-xs="80" flex-sm="80" layout-align="start start">
+                                    <div class="violation-esk-object">
+                                        ВЛ-110 кВ л.Южная-2 (ПС Южная - ПС Шимск с отпайками на ПС Керамзит, ПС Ракомо, ПС Борки, ПС Лесная)
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-attachments" layout="column" flex-xs="25" flex-sm="15" flex-md="10" flex-gt-md="10" layout-align="center start" layout-align-xs="start end" layout-align-sm="start end" layout-align-md="start end">
+                                    <div class="attachments-icon">
+                                        <md-icon md-font-icon="material icons" hide-gt-md>attach_file</md-icon> 12
+                                    </div>
+                                    <div>
+                                        <div hide-xs hide-sm hide-md show-gt-md>новых: 6</div>
+                                        <div class="new-attachments" flex hide-gt-md layout-align="end center">+6</div>
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-esk-object" layout="row" hide-xs hide-sm hide-md flex-gt-md="20" layout-align="start start">
+                                    <div>Василеостровский Бенедикт Семенович</div>
+                                </div>
+                            </div>
+                            <div class="violation" layout="row">
+
+                                <div class="violation-number" layout="column" flex-xs="10" flex-sm="10" flex="5" layout-align="start center" layout-align-xs="start start" layout-align-sm="start start">
+                                    <div>10</div>
+                                    <div>
+                                        <md-icon md-font-icon="material icons" class="confirmed-icon" show-xs show-sm hide-md hide-gt-md>done</md-icon>
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-is-confirmed" layout="column" hide-xs hide-sm show-gt show-gt-md flex-xs="10" flex-sm="10" flex-md="5" flex-gt-md="5" layout-align="start center">
+                                    <div>
+                                        <md-icon md-font-icon="material icons" class="confirmed-icon">done</md-icon>
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-date" layout="column" layout-align="start start" flex-md="20">
+                                    <span hide-xs hide-sm show-md show-gt-md>12 янв 2017 в 10:16</span>
+                                    <span show-xs show-sm hide-md hide-gt-md>12.01.17</span>
+                                    <span class="time" show-xs show-sm hide-md hide-gt-md>в 10:16</span>
+                                </div>
+
+
+                                <div layout="row" flex flex flex-xs="80" flex-sm="80" layout-align="start start">
+                                    <div class="violation-esk-object">
+                                        ВЛ-110 кВ л.Южная-2 (ПС Южная - ПС Шимск с отпайками на ПС Керамзит, ПС Ракомо, ПС Борки, ПС Лесная)
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-attachments" layout="column" flex-xs="25" flex-sm="15" flex-md="10" flex-gt-md="10" layout-align="center start" layout-align-xs="start end" layout-align-sm="start end" layout-align-md="start end">
+                                    <div class="attachments-icon">
+                                        <md-icon md-font-icon="material icons" hide-gt-md>attach_file</md-icon> 12
+                                    </div>
+                                    <div>
+                                        <div hide-xs hide-sm hide-md show-gt-md>новых: 6</div>
+                                        <div class="new-attachments" flex hide-gt-md layout-align="end center">+6</div>
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-esk-object" layout="row" hide-xs hide-sm hide-md flex-gt-md="20" layout-align="start start">
+                                    <div>Василеостровский Бенедикт Семенович</div>
+                                </div>
+                            </div>
+                            <div class="violation" layout="row">
+
+                                <div class="violation-number" layout="column" flex-xs="10" flex-sm="10" flex="5" layout-align="start center" layout-align-xs="start start" layout-align-sm="start start">
+                                    <div>10</div>
+                                    <div>
+                                        <md-icon md-font-icon="material icons" class="confirmed-icon" show-xs show-sm hide-md hide-gt-md>done</md-icon>
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-is-confirmed" layout="column" hide-xs hide-sm show-gt show-gt-md flex-xs="10" flex-sm="10" flex-md="5" flex-gt-md="5" layout-align="start center">
+                                    <div>
+                                        <md-icon md-font-icon="material icons" class="confirmed-icon">done</md-icon>
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-date" layout="column" layout-align="start start" flex-md="20">
+                                    <span hide-xs hide-sm show-md show-gt-md>12 янв 2017 в 10:16</span>
+                                    <span show-xs show-sm hide-md hide-gt-md>12.01.17</span>
+                                    <span class="time" show-xs show-sm hide-md hide-gt-md>в 10:16</span>
+                                </div>
+
+
+                                <div layout="row" flex flex flex-xs="80" flex-sm="80" layout-align="start start">
+                                    <div class="violation-esk-object">
+                                        ВЛ-110 кВ л.Южная-2 (ПС Южная - ПС Шимск с отпайками на ПС Керамзит, ПС Ракомо, ПС Борки, ПС Лесная)
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-attachments" layout="column" flex-xs="25" flex-sm="15" flex-md="10" flex-gt-md="10" layout-align="center start" layout-align-xs="start end" layout-align-sm="start end" layout-align-md="start end">
+                                    <div class="attachments-icon">
+                                        <md-icon md-font-icon="material icons" hide-gt-md>attach_file</md-icon> 12
+                                    </div>
+                                    <div>
+                                        <div hide-xs hide-sm hide-md show-gt-md>новых: 6</div>
+                                        <div class="new-attachments" flex hide-gt-md layout-align="end center">+6</div>
+                                    </div>
+                                </div>
+
+
+                                <div class="violation-esk-object" layout="row" hide-xs hide-sm hide-md flex-gt-md="20" layout-align="start start">
+                                    <div>Василеостровский Бенедикт Семенович</div>
+                                </div>
+                            </div>
+
                         </div>
+
+
                     </div>
-
-
-                    <div class="violation-is-confirmed" layout="column" hide-xs hide-sm show-gt show-gt-md flex-xs="10" flex-sm="10" flex-md="5" flex-gt-md="5" layout-align="start center">
-                        <div>
-                            <md-icon md-font-icon="material icons">done</md-icon>
-                        </div>
-                    </div>
-
-
-                    <div class="violation-date" layout="column" layout-align="start start">
-                        <span hide-xs hide-sm show-md show-gt-md>12 янв 2017 в 10:16</span>
-                        <span show-xs show-sm hide-md hide-gt-md>12.01.17</span>
-                        <span class="md-subhead" show-xs show-sm hide-md hide-gt-md>в 10:16</span>
-                    </div>
-
-
-                    <div layout="row" flex flex-xs="80" flex-sm="80" layout-align="start start">
-                        <div class="violation-esk-object">
-                            ВЛ-110 кВ л.Южная-2 (ПС Южная - ПС Шимск с отпайками на ПС Керамзит, ПС Ракомо, ПС Борки, ПС Лесная)
-                        </div>
-                    </div>
-
-
-                    <div class="violation-attachments" layout="column" flex-xs="25" flex-sm="15" flex-md="10" flex-gt-md="10" layout-align="center start" layout-align-xs="start end" layout-align-sm="start end">
-                        <div>
-                            <md-icon md-font-icon="material icons" hide-md hide-gt-md>attach_file</md-icon> 12
-                        </div>
-                        <div>
-                            <span hide-xs hide-sm hide-md show-gt-md>новых: 6</span>
-                            <div flex hide-gt-md layout-align="end center">+6</div>
-                        </div>
-                    </div>
-
-
-                    <div class="violation-esk-object" layout="row" hide-xs hide-sm hide-md flex-gt-md="20" layout-align="start start">
-                        <div>Василеостровский Бенедикт Семенович</div>
-                    </div>
-
                 </div>
-                <md-divider></md-divider>
-
-                <div class="violation" layout="row">
-
-                    <div class="violation-number" layout="column" flex-xs="10" flex-sm="10" flex="5" layout-align="start center" layout-align-xs="start start" layout-align-sm="start start">
-                        <div>10</div>
-                        <div>
-                            <md-icon md-font-icon="material icons" show-xs show-sm hide-md hide-gt-md>done</md-icon>
-                        </div>
-                    </div>
-
-
-                    <div class="violation-is-confirmed" layout="column" hide-xs hide-sm show-gt show-gt-md flex-xs="10" flex-sm="10" flex-md="5" flex-gt-md="5" layout-align="start center">
-                        <div>
-                            <md-icon md-font-icon="material icons">done</md-icon>
-                        </div>
-                    </div>
-
-
-                    <div class="violation-date" layout="column" layout-align="start start">
-                        <span hide-xs hide-sm show-md show-gt-md>12 янв 2017 в 10:16</span>
-                        <span show-xs show-sm hide-md hide-gt-md>12.01.17</span>
-                        <span class="time" show-xs show-sm hide-md hide-gt-md>в 10:16</span>
-                    </div>
-
-
-                    <div layout="row" flex flex-xs="80" flex-sm="80" layout-align="start start">
-                        <div class="violation-esk-object">
-                            ВЛ-110 кВ л.Южная-2 (ПС Южная - ПС Шимск с отпайками на ПС Керамзит, ПС Ракомо, ПС Борки, ПС Лесная)
-                        </div>
-                    </div>
-
-
-                    <div class="violation-attachments" layout="column" flex-xs="25" flex-sm="15" flex-md="10" flex-gt-md="10" layout-align="center start" layout-align-xs="start end" layout-align-sm="start end">
-                        <div>
-                            <md-icon md-font-icon="material icons" hide-md hide-gt-md>attach_file</md-icon> 12
-                        </div>
-                        <div>
-                            <span hide-xs hide-sm hide-md show-gt-md>новых: 6</span>
-                            <div flex hide-gt-md layout-align="end center">+6</div>
-                        </div>
-                    </div>
-
-
-                    <div class="violation-esk-object" layout="row" hide-xs hide-sm hide-md flex-gt-md="20" layout-align="start start">
-                        <div>Василеостровский Бенедикт Семенович</div>
-                    </div>
-
-                </div>
-
 
 
             </div>

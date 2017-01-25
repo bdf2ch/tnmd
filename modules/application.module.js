@@ -8,7 +8,13 @@ angular
     .controller("BottomSheetController", ["$scope", function ($scope) {
 
     }])
-    .controller("TestController", ["$log", "$scope", "$mdSidenav", "$mdBottomSheet", "$mdDialog", function ($log, $scope, $mdSidenav, $mdBottomSheet, $mdDialog) {
+    .controller("TestController", ["$log", "$scope", "$mdSidenav", "$mdBottomSheet", "$mdDialog", "$mdMedia", function ($log, $scope, $mdSidenav, $mdBottomSheet, $mdDialog, $mdMedia) {
+        $scope.mdMedia = $mdMedia;
+
+        $scope.$watch(function() { return $mdMedia('xs'); }, function(xs) {
+            $scope.xs = xs;
+        });
+
         $scope.open = function () {
             $mdSidenav('left').open()
                 .then(function () {
